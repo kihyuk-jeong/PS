@@ -16,7 +16,6 @@ public class 진법변환_11005 {
             basePower *= B;
             k++;
         }
-        System.out.println(k);
         String answer = "";
         while (N > 0) {
             int D = N / basePower;
