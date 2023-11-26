@@ -1,64 +1,20 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        LocalDate lastOrder = LocalDate.of(2023, 04, 05);
 
-        int TC = sc.nextInt();
+        LocalDate localDate = LocalDate.now().minusMonths(6);
 
-        while (TC-- > 0) {
+        System.out.println(lastOrder);
+        System.out.println(localDate);
 
-            int t = sc.nextInt();
-            boolean isFind = false;
-            for (int i = 2; i < 64; i++) {
-                int[] digit = getDigit(i, t);
-                if (isValid(digit)) {
-                    isFind = true;
-                }
-            }
-
-            if (isFind) {
-                System.out.println(1);
-            } else {
-                System.out.println(0);
-            }
-
-        }
+        System.out.println(lastOrder.isBefore(localDate));
 
 
-    }
-
-    private static boolean isValid(int[] digit) {
-
-        int length = digit.length / 2;
-
-        for (int i = 0; i < length; i++) {
-            if (digit[i] != digit[digit.length - 1 - i]) {
-                return false;
-            }
-        }
-
-        return true;
-
-    }
-
-    private static int[] getDigit(int i, int t) {
-
-        int arraySize = 0;
-        int temp = t;
-        while (temp > 0) {
-            temp /= i;
-            arraySize++;
-        }
-
-        int[] array = new int[arraySize];
-        int index = 0;
-        while (t > 0) {
-            array[index++] = t % i;
-            t /= i;
-        }
-        return array;
     }
 }
