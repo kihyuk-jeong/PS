@@ -1,35 +1,34 @@
 package string;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class 가장짧은문자거리 {
-
+public class 가장짧은문자거리2 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        String word = sc.next();
-        String target = sc.next();
+        String input = sc.next();
+        char target = sc.next().charAt(0);
 
-        int[] answer = solution(word, target.charAt(0));
+        int[] answer = solution(input, target);
 
-        for (int a : answer) {
-            System.out.print(a + " ");
+        for (int i : answer) {
+            System.out.print(i + " ");
         }
     }
 
-    public static int[] solution(String words, char target) {
+    private static int[] solution(String input, char target) {
 
-
-        int length = words.length();
+        int distance = 1000;
+        int length = input.length();
 
         int[] answer = new int[length];
 
-        int distance = 1000;
-
         for (int i = 0; i < length; i++) {
-            if (words.charAt(i) == target) {
+
+            char word = input.charAt(i);
+
+            if (word == target) {
                 distance = 0;
             } else {
                 distance++;
@@ -38,13 +37,16 @@ public class 가장짧은문자거리 {
         }
 
         for (int i = length - 1; i >= 0; i--) {
-            if (words.charAt(i) == target) {
+            char word = input.charAt(i);
+
+            if (word == target) {
                 distance = 0;
             } else {
                 distance++;
                 answer[i] = Math.min(answer[i], distance);
             }
         }
+
         return answer;
     }
 }
