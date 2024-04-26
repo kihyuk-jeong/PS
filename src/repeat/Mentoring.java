@@ -24,7 +24,6 @@ public class Mentoring {
 
     public static int solve(int numberOfStudents, int testCase, int[][] ranking) {
 
-        int count;
         int answer = 0;
         int positionI = 0;
         int positionJ = 0;
@@ -32,9 +31,9 @@ public class Mentoring {
         for (int i = 1; i <= numberOfStudents; i++) {
             for (int j = 1; j <= numberOfStudents; j++) {
 
-                count = 0;
+                int count = 0;
 
-                for (int k = 0; k < testCase && i!=j; k++) {
+                for (int k = 0; k < testCase && i != j; k++) {
                     for (int z = 0; z < numberOfStudents; z++) {
 
                         if (ranking[k][z] == i) {

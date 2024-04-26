@@ -27,6 +27,8 @@ public class 팰린드롬 {
             }
         }
 
+        System.out.println(builder.toString().toUpperCase());
+
         String onlyAlphabetWords = builder.toString();
         String onlyAlphabetWordsReverse = builder.reverse().toString();
 

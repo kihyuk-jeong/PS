@@ -1,21 +1,20 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        String partition = "#****##";
+        Long memberMemberUid = 8096498L;
 
-        String replace = partition.replace("#", "1").replace("*", "0");
+        int endIndex = Math.round((float) memberMemberUid / 10000);
 
-        int binaryNumber = Integer.parseInt(replace, 2);
+        List<String> collect = IntStream.rangeClosed(0, endIndex + 1)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.toList());
 
-        System.out.println((char)binaryNumber);
-
-
+        System.out.println(collect);
     }
 
 }
