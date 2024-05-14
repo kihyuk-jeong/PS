@@ -1,9 +1,10 @@
 package repeat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class TwoArraySum {
+public class GetCommonValue {
 
     public static void main(String[] args) {
 
@@ -26,7 +27,6 @@ public class TwoArraySum {
         }
 
         solve(n, array1, m, array2);
-
     }
 
     private static void solve(int n, int[] array1, int m, int[] array2) {
@@ -34,32 +34,27 @@ public class TwoArraySum {
         int lt = 0;
         int rt = 0;
 
+        Arrays.sort(array1);
+        Arrays.sort(array2);
+
         ArrayList<Integer> answer = new ArrayList<>();
 
         while (lt < n && rt < m) {
 
             if (array1[lt] < array2[rt]) {
-                answer.add(array1[lt++]);
+                lt++;
+            } else if (array1[lt] > array2[rt]) {
+                rt++;
             } else {
-                answer.add(array2[rt++]);
+                answer.add(array1[lt]);
+                lt++;
+                rt++;
             }
         }
 
-
-        if (lt != n) {
-            for (int i = lt; i < n; i++) {
-                answer.add(array1[i]);
-            }
-        }
-
-        if (rt != m) {
-            for (int i = rt; i < m; i++) {
-                answer.add(array2[i]);
-            }
-        }
-
-        for (Integer value : answer)  {
+        for (Integer value : answer) {
             System.out.print(value + " ");
         }
+
     }
 }
