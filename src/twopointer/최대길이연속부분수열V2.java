@@ -44,5 +44,4 @@ public class 최대길이연속부분수열V2 {
 
         System.out.println(answer);
     }
-
 }
