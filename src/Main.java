@@ -1,10 +1,12 @@
+import java.util.Stack;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        char s = '3';
+        Stack<Integer> stack = new Stack<>();
 
-        System.out.println((int) s - 48);
+        System.out.println(stack.peek());
 
 
     }

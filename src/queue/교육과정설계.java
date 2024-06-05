@@ -38,7 +38,7 @@ public class 교육과정설계 {
                     break;
                 }
 
-                // 필수 과목을 모두 들었다면 큐바 비어있을 것
+                // 필수 과목을 모두 들었다면 큐가 비어있을 것
                 if (queue.isEmpty()) {
                     answer = "YES";
                 }
