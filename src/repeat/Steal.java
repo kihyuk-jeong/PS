@@ -1,7 +1,5 @@
 package repeat;
 
-import twopointer.공통원소구하기_set;
-
 import java.util.Scanner;
 import java.util.Stack;
 
