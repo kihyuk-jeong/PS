@@ -35,11 +35,12 @@ public class 모든아나그램찾기 {
 
         getInitMap(word, inputLength, answer);
 
+        System.out.println(inputMap);
+        System.out.println(answer);
+
         for (int rt = inputLength - 1; rt < wordLength; rt++) {
 
             answer.put(word.charAt(rt), answer.getOrDefault(word.charAt(rt), 0) + 1);
-
-//            boolean isValid = validation(answer, inputMap);
 
             if (answer.equals(inputMap)) {
                 count++;
@@ -59,21 +60,6 @@ public class 모든아나그램찾기 {
         System.out.println(count);
 
     }
-
-//    private static boolean validation(Map<Character, Integer> map, Map<Character, Integer> inputMap) {
-//
-//
-//        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-//            Character key = entry.getKey();
-//            Integer value = entry.getValue();
-//
-//            if (!inputMap.containsKey(key) || inputMap.get(key) != value) {
-//                return false;
-//            }
-//
-//        }
-//        return true;
-//    }
 
     private static void getInitMap(String word, int inputLength, Map<Character, Integer> answer) {
         for (int i = 0; i < inputLength - 1; i++) {
