@@ -18,6 +18,7 @@ public class 숫자만추출 {
 
         int answer = 0;
 
+
         for (int i = 0; i < repeatCount; i++) {
 
             char word = input.charAt(i);

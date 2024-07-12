@@ -28,6 +28,7 @@ public class 가장짧은문자거리 {
 
         int distance = 1000;
 
+
         for (int i = 0; i < length; i++) {
             if (words.charAt(i) == target) {
                 distance = 0;
