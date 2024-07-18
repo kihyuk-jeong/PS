@@ -14,14 +14,14 @@ public class Fibonacci {
             return fibo[n] = 1;
         } else if (n == 2) {
             return fibo[n] = 1;
-        } else {
+        } else { 
             return fibo[n] = DFS(n - 2) + DFS(n - 1);
         }
     }
 
     public static void main(String[] args) {
 
-        int n = 50;
+        int n = 10;
         fibo = new int[n + 1];
 
         Fibonacci fibonacci = new Fibonacci();
