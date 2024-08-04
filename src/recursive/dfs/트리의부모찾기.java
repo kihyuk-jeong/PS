@@ -1,7 +1,7 @@
 package recursive.dfs;
 
 // ArrayList 로 변형해야함. 2차원 배열은 시간초과
-
+// https://www.acmicpc.net/problem/11725
 import java.util.Scanner;
 
 public class 트리의부모찾기 {
@@ -39,9 +39,10 @@ public class 트리의부모찾기 {
 
     private static void dfs(int idx) {
 
+        visited[idx] = true;
+
         for (int i = 1; i <= n; i++) {
             if (!visited[i] && graph[idx][i]) {
-                visited[idx] = true;
                 answer[i] = idx;
                 dfs(i);
             }
