@@ -25,7 +25,6 @@ public class 배추 {
         }
     }
 
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         T = sc.nextInt();
@@ -36,9 +35,7 @@ public class 배추 {
             N = sc.nextInt();
             K = sc.nextInt();
 
-
             map = new boolean[N + 100][M + 100];
-            // 9 , 11
 
             for (int i = 0; i < K; i++) {
                 int x = sc.nextInt();
@@ -58,9 +55,7 @@ public class 배추 {
 
                 }
             }
-
             System.out.println(answer);
-
         }
     }
 }
