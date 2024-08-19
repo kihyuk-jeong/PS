@@ -1,18 +1,15 @@
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        boolean[][] test = new boolean[5][10];
+        String temp = "12345";
 
-        test[3][2] = true;
-        for (int i = 0; i < 5; i++) {
-            System.out.println();
-            for (int j = 0; j < 10; j++) {
-                System.out.print(test[i][j] + " ");
-            }
-        }
+        int i = 4;
 
+        System.out.println(temp.substring(0,i) + temp.substring(i+1));
     }
 }
