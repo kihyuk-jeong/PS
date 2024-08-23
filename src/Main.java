@@ -6,10 +6,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String temp = "12345";
 
-        int i = 4;
 
-        System.out.println(temp.substring(0,i) + temp.substring(i+1));
+        System.out.println(isPrimeNumber(17));
     }
+
+    private static boolean isPrimeNumber(int number) {
+
+        if (number == 0 || number == 1) {
+            return false;
+        }
+
+        int limit = (int) Math.sqrt(number);
+
+        for (int i = 2; i <= limit; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+
 }
