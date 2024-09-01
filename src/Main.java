@@ -1,32 +1,21 @@
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        OffsetDateTime now = OffsetDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
 
+        String format = now.format(formatter);
 
-        System.out.println(isPrimeNumber(17));
+        System.out.println(format);
+
+//        2024-08-14T12:34:56.000+09:00
+//        2024-08-29T11:22:36.271309+09:00
     }
-
-    private static boolean isPrimeNumber(int number) {
-
-        if (number == 0 || number == 1) {
-            return false;
-        }
-
-        int limit = (int) Math.sqrt(number);
-
-        for (int i = 2; i <= limit; i++) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
 
 }
