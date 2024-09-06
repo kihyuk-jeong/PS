@@ -44,8 +44,6 @@ public class 소수찾기요 {
             set.add(Integer.parseInt(comp));
         }
 
-        // 17
-
         for (int i = 0; i < input.length(); i++) {
             recursive(comp + input.charAt(i), input.substring(0, i) + input.substring(i+1));
         }
