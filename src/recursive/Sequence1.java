@@ -23,7 +23,9 @@ public class Sequence1 {
 
         recur(0, new ArrayList<>());
 
-        System.out.println(result.toString());
+        for (List<String> list : result) {
+            System.out.println(list);
+        }
 
 
     }

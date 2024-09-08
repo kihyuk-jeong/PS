@@ -1,21 +1,38 @@
-import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
+    static List<List<Integer>> result = new ArrayList<>();
+
     public static void main(String[] args) {
 
-        OffsetDateTime now = OffsetDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
-        String format = now.format(formatter);
+        recursive(1, n, new ArrayList<>());
 
-        System.out.println(format);
-
-//        2024-08-14T12:34:56.000+09:00
-//        2024-08-29T11:22:36.271309+09:00
+        for (List<Integer> list : result) {
+            System.out.println(list.toString());
+        }
     }
+
+    private static void recursive(int startIndex, int n, List<Integer> current) {
+
+        if (current.size() == 3) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
+
+        for (int i = startIndex; i <= n; i++) {
+
+            current.add(i);
+            recursive(i+1, n, current);
+            current.remove(current.size() - 1);
+        }
+    }
+
+
 
 }

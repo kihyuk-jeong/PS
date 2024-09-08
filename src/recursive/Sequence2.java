@@ -17,7 +17,9 @@ public class Sequence2 {
 
         recur(0, new ArrayList<>(), new boolean[n + 1]);  // 사용 여부를 체크할 boolean 배열 추가
 
-        System.out.println(result.toString());
+        for (List<String> list : result) {
+            System.out.println(list);
+        }
     }
 
     private static void recur(int number, List<String> letter, boolean[] used) {
