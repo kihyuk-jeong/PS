@@ -1,36 +1,18 @@
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Main {
 
-    static List<List<Integer>> result = new ArrayList<>();
-
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        List<String> collect = IntStream.rangeClosed(0, 1501)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.toList());
 
-        recursive(1, n, new ArrayList<>());
+        System.out.println(collect);
 
-        for (List<Integer> list : result) {
-            System.out.println(list.toString());
-        }
-    }
 
-    private static void recursive(int startIndex, int n, List<Integer> current) {
-
-        if (current.size() == 3) {
-            result.add(new ArrayList<>(current));
-            return;
-        }
-
-        for (int i = startIndex; i <= n; i++) {
-
-            current.add(i);
-            recursive(i+1, n, current);
-            current.remove(current.size() - 1);
-        }
     }
 
 

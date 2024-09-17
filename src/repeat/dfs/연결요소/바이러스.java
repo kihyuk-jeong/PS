@@ -1,28 +1,26 @@
-package repeat.dfs;
+package repeat.dfs.연결요소;
 
 import java.util.Scanner;
 
-/**
- * https://www.acmicpc.net/problem/2644
- */
-public class 촌수_계산 {
-
-    static int n, m, x, y, count, answer;
-
-    static boolean [][] graph;
+public class 바이러스 {
     static boolean [] visited;
+    static boolean [][] graph;
+    static int n,m;
+
+    static int answer = 0;
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
+        // 정점의 갯수
         n = sc.nextInt();
-        x = sc.nextInt();
-        y = sc.nextInt();
+
+        // 간선의 갯수
         m = sc.nextInt();
 
-        graph = new boolean[n + 1][n + 1];
         visited = new boolean[n + 1];
+        graph = new boolean[n + 1][n + 1];
 
         for (int i = 0; i < m; i++) {
             int x = sc.nextInt();
@@ -32,9 +30,7 @@ public class 촌수_계산 {
             graph[y][x] = true;
         }
 
-        answer = -1;
-        count = 0;
-        dfs(x);
+        dfs(1);
 
         System.out.println(answer);
     }
@@ -43,28 +39,16 @@ public class 촌수_계산 {
 
         visited[idx] = true;
 
-        if (idx == y) {
-            answer = count;
-            return;
-        }
-
         for (int i = 1; i <= n; i++) {
 
             if (!visited[i] && graph[idx][i]) {
-                System.out.println("X : " + idx + " Y : " + i);
-                count++;
-                System.out.println(count);
                 dfs(i);
-                count--;
-                System.out.println(count);
+                answer++;
             }
 
         }
 
-
-
     }
-
 
 
 }
