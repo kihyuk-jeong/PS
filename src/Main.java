@@ -6,13 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<String> collect = IntStream.rangeClosed(0, 1501)
-                .mapToObj(String::valueOf)
-                .collect(Collectors.toList());
+        double n = (double) 3 / 7;
 
-        System.out.println(collect);
-
-
+        System.out.println(n);
     }
 
 
