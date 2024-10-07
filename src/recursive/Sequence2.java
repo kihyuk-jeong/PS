@@ -17,6 +17,8 @@ public class Sequence2 {
 
         recur(0, new ArrayList<>(), new boolean[n + 1]);  // 사용 여부를 체크할 boolean 배열 추가
 
+//        recur(0, 1, new ArrayList<>());
+
         for (List<String> list : result) {
             System.out.println(list);
         }
@@ -42,4 +44,21 @@ public class Sequence2 {
             used[i] = false;  // 백트래킹: 다음 경우를 위해 다시 사용 가능하도록 함
         }
     }
+
+    private static void recur(int number, int start, List<String> letter) {
+
+        if (number == m) {
+            result.add(new ArrayList<>(letter));
+            return;
+        }
+
+        for (int i = start; i <= n; i++) {
+
+            letter.add(String.valueOf(i));
+            recur(number + 1, i + 1, letter);
+            letter.remove(letter.size() - 1);
+        }
+
+    }
+
 }

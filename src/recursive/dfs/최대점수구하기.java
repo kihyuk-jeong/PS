@@ -34,29 +34,28 @@ public class 최대점수구하기 {
             grades[i] = new Grade(score, ttl);
         }
 
-        recursive(0, 0, 0);
+        recursive2(0, 0, 0);
 
         System.out.println(answer);
     }
 
     private static void recursive(int index, int scoreSum, int timeSum) {
 
+
         if (timeSum > limit) {
             return;
         }
 
         if (index == n) {
+
             answer = Math.max(scoreSum, answer);
             return;
         }
-
         recursive(index + 1, scoreSum + grades[index].score, timeSum + grades[index].ttl);
         recursive(index + 1, scoreSum, timeSum);
     }
 
     private static void recursive2(int start, int scoreSum, int timeSum) {
-
-        System.out.println(scoreSum);
 
         if (timeSum > limit) {
             return;
