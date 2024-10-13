@@ -43,9 +43,6 @@ public class 쇠막대기 {
         }
 
         System.out.println(answer);
-
-
-
     }
 
 }
