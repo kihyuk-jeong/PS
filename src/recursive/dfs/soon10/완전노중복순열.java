@@ -2,6 +2,9 @@ package recursive.dfs.soon10;
 
 import java.util.Scanner;
 
+/**
+ * 조합
+ */
 public class 완전노중복순열 {
 
     private static int n, m;

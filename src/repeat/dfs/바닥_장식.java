@@ -2,6 +2,10 @@ package repeat.dfs;
 
 import java.util.Scanner;
 
+/**
+ * https://www.acmicpc.net/problem/1388
+ */
+
 public class 바닥_장식 {
 
     static int N, M;
