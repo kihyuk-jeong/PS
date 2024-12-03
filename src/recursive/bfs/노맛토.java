@@ -74,19 +74,6 @@ public class 노맛토 {
         return false;
     }
 
-    private static boolean isAllEmptyBox(int n, int m) {
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (box[i][j] == 1) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-
     private static void bfs(int n, int m) {
 
 
