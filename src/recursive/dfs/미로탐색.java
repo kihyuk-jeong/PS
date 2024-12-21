@@ -2,6 +2,10 @@ package recursive.dfs;
 
 import java.util.Scanner;
 
+/**
+ * 백트래킹 시 현재 위치를 미방문 처리 하는 것이 아닌 내가 방금 갔던 길 (next) 를 다시 가기 위해 미방문 처리 하는 것.
+ */
+
 public class 미로탐색 {
 
     private static int[] dirY = {0, 1, 0, -1};
