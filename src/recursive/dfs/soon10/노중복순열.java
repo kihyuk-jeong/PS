@@ -40,10 +40,7 @@ public class 노중복순열 {
                 dfs(level+1);
                 checked[i] = false;
             }
-
         }
-
-
     }
 
 
