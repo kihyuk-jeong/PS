@@ -1,15 +1,18 @@
+import java.time.LocalDateTime;
 import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        YearMonth now = YearMonth.now();
 
-        System.out.println(now.toString());
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-        System.out.println(now.plusMonths(1));
-        System.out.println(now.plusYears(5));
+        LocalDateTime now = LocalDateTime.now();
+
+        System.out.println(now.format(dateTimeFormatter));
+
 
     }
 }

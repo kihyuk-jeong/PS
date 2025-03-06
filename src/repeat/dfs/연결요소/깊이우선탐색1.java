@@ -21,7 +21,6 @@ public class 깊이우선탐색1 {
         v = sc.nextInt();
         r = sc.nextInt();
 
-
         graph = new ArrayList[u + 1];
         visited = new boolean[u + 1];
         orders = new int[u + 1];
