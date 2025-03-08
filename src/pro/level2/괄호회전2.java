@@ -5,6 +5,10 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Stack;
 
+/**
+ * https://school.programmers.co.kr/learn/courses/30/lessons/76502
+ */
+
 public class 괄호회전2 {
 
     public static void main(String[] args) {
