@@ -1,18 +1,17 @@
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
+import java.util.ArrayDeque;
 
 public class Main {
 
+
     public static void main(String[] args) {
 
+        ArrayDeque<Integer> deque = new ArrayDeque<>();
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-        LocalDateTime now = LocalDateTime.now();
-
-        System.out.println(now.format(dateTimeFormatter));
-
-
+        for (int i = 1; i <= 5; i++) {
+            deque.addLast(i);
+        }
+        System.out.println(deque);
     }
 }
