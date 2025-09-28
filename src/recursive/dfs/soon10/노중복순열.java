@@ -32,6 +32,8 @@ public class 노중복순열 {
             return;
         }
 
+        // 첫번쨰 포문에 1이 들어감 1 트루  -> 첫
+        // 세번쨰 포문에 3
         for (int i = 1; i <= n; i++) {
 
             if (!checked[i]) {

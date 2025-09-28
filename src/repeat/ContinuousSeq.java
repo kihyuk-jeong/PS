@@ -3,9 +3,6 @@ package repeat;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- * 연속 부분수열 : 슬라이딩 윈도우와 투포인터 알고리즘 활용
- */
 public class ContinuousSeq {
 
     public static void main(String[] args) {

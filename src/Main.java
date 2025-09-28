@@ -1,17 +1,19 @@
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayDeque;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws URISyntaxException {
 
-        ArrayDeque<Integer> deque = new ArrayDeque<>();
+        System.out.println(
+                LocalDateTime.now().plusDays(30).minusYears(5).minusDays(3)
+        );
 
-        for (int i = 1; i <= 5; i++) {
-            deque.addLast(i);
-        }
-        System.out.println(deque);
     }
+
+
 }
